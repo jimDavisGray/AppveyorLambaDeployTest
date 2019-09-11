@@ -1,0 +1,105 @@
+##################### >>>>> Common configuration section  <<<<< #####################
+
+### Operating system (build VM template)
+image: Visual Studio 2017
+
+branches:
+  except:
+    - /.*/   # skipt build on all branches
+
+skip_commits:
+  message: /skip-build/
+
+#environment:
+
+### scripts that are called at very beginning, before repo cloning
+#init:
+
+clone_depth: 1
+### build platform, i.e. x86, x64, Any CPU. This setting is optional.
+platform: Any CPU
+### build Configuration, i.e. Debug, Release, etc.
+configuration: Release
+
+### version format
+version: 1.0.0.{build}
+
+### caching
+#cache:
+
+install:
+#  - ps: Install-Product node 8.12.0
+#  - cmd: npm install npm@6.10.3 -g --silent
+#  - cmd: npm install -g @angular/cli@7.3.9 --silent
+
+before_build:
+  - cmd: dotnet --version
+#  - cmd: dotnet restore FannieLenderPortal.sln --verbosity m
+  
+build_script:
+#  - ps: cd "$env:APPVEYOR_BUILD_FOLDER\App.WebClient\NgApp"  - ps: cd "$env:APPVEYOR_BUILD_FOLDER"
+#  - cmd: dotnet publish App.WebService\App.WebService.csproj -o ..\publish\WebApp        # Build WebService
+#  - cmd: dotnet publish Rockport.SlackNotifier\Rockport.SlackNotifier.csproj -o   
+
+# run once build has completed
+after_build:
+#   - ps: Copy-Item publish\Angular -Destination publish\WebApp\wwwroot -Recurse   # Copy contents to WebService
+#   - 7z a database.zip .\database\*.* -r
+
+#test_script:
+
+### enable patching of *.csproj
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+
+artifacts:
+  - path: publish\WebApp
+    name: WebApp
+
+#  - path: publish\SlackNotifier
+#    name: SlackNotifier
+  
+  
+# perform cleanup
+on_finish:
+#  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+deploy: off
+
+#for:
+##################### >>>>> development Branch  <<<<< #####################
+-
+#  branches:
+#    only:
+#      - development    
+
+  ### version format
+#  version: DEV-1.0.8.{build}
+  
+  # run tests
+  # test_script:
+  #   - cmd: dotnet test Components.Tests\Components.Tests.csproj
+
+#  deploy:
+#  - provider: Environment
+#    name: FNMA-LENDER-PORTAL-DEV-DB
+
+#  - provider: Environment
+#    name: FNMA-LENDER-PORTAL-DEV
+
+-  
+#  branches:
+#    only:
+#      - /release-*/
+#      - /hotfix-*/
+     
+  ### version format
+#  version: REL-1.0.7.{build}
+
+  ### build Configuration, i.e. Debug, Release, etc.
+#  configuration: Release

@@ -7,12 +7,17 @@
 
     "All the command line options for the Lambda command can be specified in this file."
   ],
-
-  "profile":"",
-  "region" : "",
+  "profile": "deploy"
+  "region": "us-east-1",
   "configuration": "Release",
+  "function-memory-size": 1024,
   "framework": "netcoreapp2.1",
   "s3-prefix": "DebuggingExample/",
   "template": "serverless.template",
-  "template-parameters": ""
+  "template-parameters": "",
+  "function-handler": "DebuggingExample::DebuggingExample.Functions::Get",
+  "function-runtime": "dotnetcore2.1",
+  "function-role": "AVDeployTest-role-by8y9v28",
+  "environment-variables": "foo=bar",
+  "function-timeout": 90
 }

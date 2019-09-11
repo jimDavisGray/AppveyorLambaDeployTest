@@ -15,7 +15,8 @@ namespace DebuggingExample {
 
         public APIGatewayProxyResponse Get(
             APIGatewayProxyRequest request, ILambdaContext context) {
-            var result = processor.CurrentTimeUTC();
+            //var result = processor.CurrentTimeUTC();
+            DateTime? result = null;
 
             return CreateResponse(result);
         }
@@ -26,7 +27,9 @@ namespace DebuggingExample {
                 (int) HttpStatusCode.InternalServerError;
 
             string body = (result != null) ?
-                JsonConvert.SerializeObject(result) : string.Empty;
+                //JsonConvert.SerializeObject(result) : string.Empty;
+				JsonConvert.SerializeObject(result) : "It is not a time";
+				
 
             var response = new APIGatewayProxyResponse {
                 StatusCode = statusCode,
