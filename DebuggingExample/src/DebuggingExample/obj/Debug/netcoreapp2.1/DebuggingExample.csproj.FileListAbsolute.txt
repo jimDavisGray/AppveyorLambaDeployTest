@@ -1,0 +1,11 @@
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\bin\Debug\netcoreapp2.1\DebuggingExample.deps.json
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\bin\Debug\netcoreapp2.1\DebuggingExample.runtimeconfig.json
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\bin\Debug\netcoreapp2.1\DebuggingExample.runtimeconfig.dev.json
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\bin\Debug\netcoreapp2.1\DebuggingExample.dll
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\bin\Debug\netcoreapp2.1\DebuggingExample.pdb
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\obj\Debug\netcoreapp2.1\DebuggingExample.csprojAssemblyReference.cache
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\obj\Debug\netcoreapp2.1\DebuggingExample.csproj.CoreCompileInputs.cache
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\obj\Debug\netcoreapp2.1\DebuggingExample.AssemblyInfoInputs.cache
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\obj\Debug\netcoreapp2.1\DebuggingExample.AssemblyInfo.cs
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\obj\Debug\netcoreapp2.1\DebuggingExample.dll
+C:\Working\AppveyorTest\AppveyorLambaDeployTest\DebuggingExample\src\DebuggingExample\obj\Debug\netcoreapp2.1\DebuggingExample.pdb
