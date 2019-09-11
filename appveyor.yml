@@ -36,7 +36,7 @@ before_build:
   - cmd: dotnet --version
 #  - cmd: dotnet restore FannieLenderPortal.sln --verbosity m
   
-build_script:
+#build_script:
 #  - cmd: dotnet publish App.WebService\App.WebService.csproj -o ..\publish\WebApp        # Build WebService
 #  - ps: cd "$env:APPVEYOR_BUILD_FOLDER\App.WebClient\NgApp"  - ps: cd "$env:APPVEYOR_BUILD_FOLDER"
 #  - cmd: dotnet publish App.WebService\App.WebService.csproj -o ..\publish\WebApp        # Build WebService
