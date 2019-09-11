@@ -3,6 +3,11 @@
 ### Operating system (build VM template)
 image: Visual Studio 2017
 
+build: off
+
+build_script:
+- cmd: afasdfasdfasdfasd
+
 branches:
   except:
     - /.*/   # skipt build on all branches
@@ -37,6 +42,7 @@ before_build:
 #  - cmd: dotnet restore FannieLenderPortal.sln --verbosity m
   
 build_script:
+#  - cmd: dotnet publish App.WebService\App.WebService.csproj -o ..\publish\WebApp        # Build WebService
 #  - ps: cd "$env:APPVEYOR_BUILD_FOLDER\App.WebClient\NgApp"  - ps: cd "$env:APPVEYOR_BUILD_FOLDER"
 #  - cmd: dotnet publish App.WebService\App.WebService.csproj -o ..\publish\WebApp        # Build WebService
 #  - cmd: dotnet publish Rockport.SlackNotifier\Rockport.SlackNotifier.csproj -o   
@@ -49,18 +55,18 @@ after_build:
 #test_script:
 
 ### enable patching of *.csproj
-dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
+#dotnet_csproj:
+#  patch: true
+#  file: '**\*.csproj'
+#  version: '{version}'
+#  package_version: '{version}'
+#  assembly_version: '{version}'
+#  file_version: '{version}'
+#  informational_version: '{version}'
 
 artifacts:
-  - path: publish\WebApp
-    name: WebApp
+#  - path: publish\WebApp
+#    name: WebApp
 
 #  - path: publish\SlackNotifier
 #    name: SlackNotifier
