@@ -3,17 +3,12 @@
 ### Operating system (build VM template)
 image: Visual Studio 2017
 
-build: script
+#build: script
 
 build_script:
 - cmd: echo "Hello!"
 
-branches:
-  except:
-    - /.*/   # skipt build on all branches
 
-skip_commits:
-  message: /skip-build/
 
 #environment:
 
