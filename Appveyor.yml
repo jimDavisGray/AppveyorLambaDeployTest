@@ -3,10 +3,10 @@
 ### Operating system (build VM template)
 image: Visual Studio 2017
 
-build: off
+build: script
 
 build_script:
-- cmd: afasdfasdfasdfasd
+- cmd: echo "Hello!"
 
 branches:
   except:
