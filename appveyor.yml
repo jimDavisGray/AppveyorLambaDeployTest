@@ -11,6 +11,8 @@ build_script:
 - cmd: pwd
 - cmd: cd DebuggingExample\src\DebuggingExample\
 - cmd: pwd
+- cmd: dotnet restore
+- cmd: dotnet lambda --help
 
 #environment:
 
