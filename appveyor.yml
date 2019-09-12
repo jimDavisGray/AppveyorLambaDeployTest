@@ -74,5 +74,6 @@ artifacts:
 
   - path: deploy.ps1
     name: AVDeployTest
+    type: zip
   
   
