@@ -15,6 +15,5 @@ Get-ChildItem @("env:APPVEYOR_*"; "env:APPLICATION_*"; "env:ARTIFACT_*"; "env:VE
 #$env:aws_access_key_id
 #$env:aws_secret_access_key
 
-pwd
 
-aws --region us-east-1 lambda update-function-code --function-name AVDeployTest --zip-file fileb://Lambda.zip
+aws --region us-east-1 lambda update-function-code --function-name AVDeployTest --zip-file fileb://$env:APPLICATION_PATH/Lambda.zip
