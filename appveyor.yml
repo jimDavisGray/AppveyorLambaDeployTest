@@ -49,9 +49,7 @@ before_build:
 
 # run once build has completed
 after_build:
-- cmd: echo "Current Path is"
-- cmd: pwd
-- cmd: DIR C:\projects\appveyorlambadeploytest\DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1
+- ps: 7z a DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1\Lambda.zip DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1\LambdaDeploy.zip
 
 #   - ps: Copy-Item publish\Angular -Destination publish\WebApp\wwwroot -Recurse   # Copy contents to WebService
 #   - 7z a database.zip .\database\*.* -r
@@ -69,7 +67,7 @@ after_build:
 #  informational_version: '{version}'
 
 artifacts:
-  - path: DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1\Lambda.zip
+  - path: DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1\LambdaDeploy.zip
     name: AVDeployTest
 
   - path: deploy.ps1
