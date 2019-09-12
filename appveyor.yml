@@ -9,6 +9,8 @@ build_script:
 - cmd: echo "Hello!"
 - cmd: aws --version
 - cmd: pwd
+- cmd: cd DebuggingExample\src\DebuggingExample\
+- cmd: pwd
 
 #environment:
 
