@@ -53,6 +53,7 @@ after_build:
 - ps: pwd
 - ps: 7z a LambdaDeploy.zip Lambda.zip
 - ps: cd ../../../../../../
+- ps: pwd
 - ps: 7z a LambdaDeploy.zip deploy.ps1
 
 #   - ps: Copy-Item publish\Angular -Destination publish\WebApp\wwwroot -Recurse   # Copy contents to WebService
