@@ -69,7 +69,7 @@ after_build:
 #  informational_version: '{version}'
 
 artifacts:
-  - path: C:\projects\appveyorlambadeploytest\DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1\Lambda.zip
+  - path: DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1\Lambda.zip
     name: WebApp
 
 #  - path: publish\SlackNotifier
