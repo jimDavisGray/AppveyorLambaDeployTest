@@ -39,7 +39,6 @@ install:
 
 before_build:
   - cmd: dotnet --version
-  - cmd: C:\projects\appveyorlambadeploytest\DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1
 #  - cmd: dotnet restore FannieLenderPortal.sln --verbosity m
   
 #build_script:
@@ -52,6 +51,8 @@ before_build:
 after_build:
 - cmd: echo "Current Path is"
 - cmd: pwd
+- cmd: DIR C:\projects\appveyorlambadeploytest\DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1
+
 #   - ps: Copy-Item publish\Angular -Destination publish\WebApp\wwwroot -Recurse   # Copy contents to WebService
 #   - 7z a database.zip .\database\*.* -r
 
