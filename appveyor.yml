@@ -39,6 +39,7 @@ install:
 
 before_build:
   - cmd: dotnet --version
+  - cmd: C:\projects\appveyorlambadeploytest\DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1
 #  - cmd: dotnet restore FannieLenderPortal.sln --verbosity m
   
 #build_script:
