@@ -15,12 +15,4 @@ Get-ChildItem @("env:APPVEYOR_*"; "env:APPLICATION_*"; "env:ARTIFACT_*"; "env:VE
 #$env:aws_access_key_id
 #$env:aws_secret_access_key
 
-aws cli --version
-						
-Write-Host ""
-Write-Host "========================================================"
-Write-Host "CI Automation     [2]: SQLCI Pre Migration - Process Started." -back blue -fore white
-Write-Host "SqlCI Release Status : $($PreMigrationItem.Status)"
-Write-Host "Deployment Folder    : $($env:RBS_DEPLOYMENT_SCRIPT_FOLDER)"
-Write-Host "Deployment Script    : $($PreMigrationItem.Script)"
-Write-Host "--------------------------------------------------------"
+aws  --region us-east-1 lambda update-function-code --function-name AVDeployTest --zip-file fileb://Lambda.zip
