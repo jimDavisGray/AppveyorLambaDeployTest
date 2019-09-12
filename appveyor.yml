@@ -70,7 +70,7 @@ after_build:
 
 artifacts:
   - path: DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1\Lambda.zip
-    name: WebApp
+    name: AVDeployTest
 
 #  - path: publish\SlackNotifier
 #    name: SlackNotifier
