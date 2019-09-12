@@ -11,6 +11,8 @@
 
 Get-ChildItem @("env:APPVEYOR_*"; "env:APPLICATION_*"; "env:ARTIFACT_*"; "env:VERACODE_*"; "env:AVVM_*"; "env:RKPT_*"; "env:RBS_*"; "env:FNMA_*") | Sort-Object Name
 
+
+$env:aws_access_key_id
 						
 Write-Host ""
 Write-Host "========================================================"
