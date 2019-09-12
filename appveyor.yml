@@ -49,8 +49,8 @@ before_build:
 
 # run once build has completed
 after_build:
-- cmd: pwd
-- ps: 7z a bin\release\netcoreapp2.1\Lambda.zip bin\release\netcoreapp2.1\LambdaDeploy.zip
+- ps: pwd
+- ps: 7z a bin\release\netcoreapp2.1\LambdaDeploy.zip bin\release\netcoreapp2.1\Lambda.zip
 
 #   - ps: Copy-Item publish\Angular -Destination publish\WebApp\wwwroot -Recurse   # Copy contents to WebService
 #   - 7z a database.zip .\database\*.* -r
