@@ -49,8 +49,11 @@ before_build:
 
 # run once build has completed
 after_build:
+- ps: cd bin\release\netcoreapp2.1
 - ps: pwd
-- ps: 7z a bin\release\netcoreapp2.1\LambdaDeploy.zip bin\release\netcoreapp2.1\Lambda.zip
+- ps: 7z a LambdaDeploy.zip Lambda.zip
+- ps: cd ../../../../../../
+- ps: 7z a LambdaDeploy.zip deploy.ps1
 
 #   - ps: Copy-Item publish\Angular -Destination publish\WebApp\wwwroot -Recurse   # Copy contents to WebService
 #   - 7z a database.zip .\database\*.* -r
@@ -71,8 +74,8 @@ artifacts:
   - path: DebuggingExample\src\DebuggingExample\bin\release\netcoreapp2.1\LambdaDeploy.zip
     name: AVDeployTest
 
-  - path: deploy.ps1
-    name: AVDeployTest
-    type: zip
+#  - path: deploy.ps1
+#    name: AVDeployTest
+#    type: zip
   
   
