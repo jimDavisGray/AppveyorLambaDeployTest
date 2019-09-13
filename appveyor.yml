@@ -6,11 +6,9 @@ image: Visual Studio 2017
 #build: script
 
 build_script:
-#dotnet tool install --global Amazon.Lambda.Tools --version 3.3.0
-- cmd: dotnet lambda --version
 #- cmd: aws --version
 #- cmd: pwd
-#- cmd: cd DebuggingExample\src\DebuggingExample\
+- cmd: cd DebuggingExample\src\DebuggingExample\
 #- cmd: pwd
 - cmd: dotnet restore
 - cmd: dotnet lambda package --configuration release --framework netcoreapp2.1 --output-package bin/release/netcoreapp2.1/Lambda.zip
@@ -41,6 +39,7 @@ install:
 
 before_build:
   - cmd: dotnet --version
+  - cmd: dotnet lambda --version
 #  - cmd: dotnet restore FannieLenderPortal.sln --verbosity m
   
 #build_script:
