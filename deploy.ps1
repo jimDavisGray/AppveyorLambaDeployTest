@@ -17,5 +17,4 @@ Get-ChildItem @("env:APPVEYOR_*"; "env:APPLICATION_*"; "env:ARTIFACT_*"; "env:VE
 
 
 #aws --region us-east-1 lambda update-function-code --function-name AVDeployTest --zip-file fileb://$env:APPLICATION_PATH/Lambda.zip
-pwd
-dotnet lambda deploy-function -cfg C:\Working\AVAgent\aws-lambda-tools-defaults.json -pac C:\Working\AVAgent\Lambda.zip AVDeployTest
+dotnet lambda deploy-function -cfg $env:APPLICATION_PATH\aws-lambda-tools-defaults.json -pac $env:APPLICATION_PATH\Lambda.zip $env:Lambda_Name
