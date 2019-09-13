@@ -6,14 +6,15 @@ image: Visual Studio 2017
 #build: script
 
 build_script:
-- cmd: echo "Hello!"
-- cmd: aws --version
-- cmd: pwd
-- cmd: cd DebuggingExample\src\DebuggingExample\
-- cmd: pwd
+#dotnet tool install --global Amazon.Lambda.Tools --version 3.3.0
+- cmd: dotnet lambda --version
+#- cmd: aws --version
+#- cmd: pwd
+#- cmd: cd DebuggingExample\src\DebuggingExample\
+#- cmd: pwd
 - cmd: dotnet restore
 - cmd: dotnet lambda package --configuration release --framework netcoreapp2.1 --output-package bin/release/netcoreapp2.1/Lambda.zip
-- cmd: dotnet lambda --help
+#- cmd: dotnet lambda --help
 
 #environment:
 
@@ -52,7 +53,9 @@ after_build:
 - ps: cd bin\release\netcoreapp2.1
 - ps: pwd
 - ps: 7z a LambdaDeploy.zip Lambda.zip ../../../../../../deploy.ps1
-- ps: ls ../../../../../../
+- ps: 7z a LambdaDeploy.zip Lambda.zip ../../../aws-lambda-tools-defaults.json
+- ps: 7z a LambdaDeploy.zip Lambda.zip ../../../serverless.template
+
 
 
 #   - ps: Copy-Item publish\Angular -Destination publish\WebApp\wwwroot -Recurse   # Copy contents to WebService
