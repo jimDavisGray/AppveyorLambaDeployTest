@@ -28,7 +28,7 @@ namespace DebuggingExample {
 
             string body = (result != null) ?
                 //JsonConvert.SerializeObject(result) : string.Empty;
-				JsonConvert.SerializeObject(result) : "It is not a time ?!?!";
+				JsonConvert.SerializeObject(result) : "It is not a time _+_+_+_+";
 				
 
             var response = new APIGatewayProxyResponse {
