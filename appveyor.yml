@@ -34,6 +34,7 @@ version: 1.0.0.{build}
 #cache:
 
 install:
+- cmd: dotnet tool install --global Amazon.Lambda.Tools --version 3.3.0
 #  - ps: Install-Product node 8.12.0
 #  - cmd: npm install npm@6.10.3 -g --silent
 #  - cmd: npm install -g @angular/cli@7.3.9 --silent
