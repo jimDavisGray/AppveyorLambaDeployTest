@@ -9,7 +9,8 @@ build_script:
 #- cmd: aws --version
 #- cmd: pwd
 - cmd: cd DebuggingExample\src\DebuggingExample\
-#- cmd: pwd
+- cmd: pwd
+- cmd: echo "Got Here!"
 - cmd: dotnet restore
 - cmd: dotnet lambda package --configuration release --framework netcoreapp2.1 --output-package bin/release/netcoreapp2.1/Lambda.zip
 #- cmd: dotnet lambda --help
